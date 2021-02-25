@@ -9,7 +9,9 @@ body {
   text-align: center;
 }
 
-/* Typography */
+/* =================
+  typography
+  ================= */
 
 h1 {
   font-size: 2.25rem;
@@ -19,35 +21,31 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 0;
+  margin: 0;
 }
 
-.header-sub, .main-title {
+h2, .header-sub {
   font-size: 1.3125rem;
 }
 
-strong { font-weight: 900; }
+h2, strong { font-weight: 900; }
 
-/* used specific class name to select element but could use:
- h1 + p for adjacent sibling 'p's or h1 ~ p for all sibling 'p's (v useful for React) */
 .header-sub, .main-sub {
   color: #F18119;
   text-transform: uppercase;
   font-weight: 900;
 }
 
-.main-sub {
-  font-size: 1rem;
-}
-
 .top-text, .fine-print {
   font-size: 0.625rem;
+  letter-spacing: 1px;
 }
 
 .top-text {
   order: -1;
   margin: 0;
   color: #F18119;
+  font-weight: 900;
   border-top: #F18119 5px solid;
   padding-top: 0.3em;
   text-transform: uppercase;
@@ -57,7 +55,9 @@ strong { font-weight: 900; }
   margin-top: 0;
 }
 
-/* Layout */
+/* =================
+  layout
+  ================= */
 
 header, main {
   display: flex;
@@ -67,11 +67,32 @@ header, main {
 
 header {
   height: 100%;
-  background: url(images/dark-ribs.jpg);
+  background-color: #404040; /* In case background-image doesn't load */
+  background-image: url(images/dark-ribs.jpg);
   background-position: center;
   background-size: cover;
+  padding: 0 .5em 2em;
 }
 
 main {
-  padding: 1em;
+  padding: 2em 1em;
+}
+
+/* =================
+  media queries 
+  ================= */
+   
+@media (min-width: 500px) {
+  body {
+    display: flex;
+    height: 100vh;
+  }
+  
+  header {
+    width: 60%;
+  }
+  
+  main {
+    width: 40%;
+  }
 }
