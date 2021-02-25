@@ -1,7 +1,12 @@
-/*  font-family: 'Source Sans Pro', sans-serif;  */
+html { /* Used in every single project */
+  box-sizing: border-box;
+}
+*, *:before, *:after { /* Used in every single project */
+  box-sizing: inherit;
+}
 
 body {
-  margin: 0;
+  margin: 0; /* Used in every single project */
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
   color: #404040;
@@ -10,8 +15,8 @@ body {
 }
 
 /* =================
-  typography
-  ================= */
+   typography
+   ================= */
 
 h1 {
   font-size: 2.25rem;
@@ -24,19 +29,22 @@ h2 {
   margin: 0;
 }
 
-h2, .header-sub {
+h2, 
+.header-sub {
   font-size: 1.3125rem;
 }
 
 h2, strong { font-weight: 900; }
 
-.header-sub, .main-sub {
+.header-sub, 
+.main-sub {
   color: #F18119;
   text-transform: uppercase;
   font-weight: 900;
 }
 
-.top-text, .fine-print {
+.top-text, 
+.fine-print {
   font-size: 0.625rem;
   letter-spacing: 1px;
 }
@@ -56,10 +64,11 @@ h2, strong { font-weight: 900; }
 }
 
 /* =================
-  layout
-  ================= */
+   layout
+   ================= */
 
-header, main {
+header, 
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,24 +84,34 @@ header {
 }
 
 main {
+  margin: 0 auto;
   padding: 2em 1em;
+  max-width: 400px;
 }
 
 /* =================
-  media queries 
-  ================= */
+   media queries 
+   ================= */
    
-@media (min-width: 500px) {
+@media (min-width: 650px) {
   body {
+    font-size: 1.125rem;
     display: flex;
-    height: 100vh;
   }
   
-  header {
-    width: 60%;
+  h1 {
+    font-size: 3.5rem;
   }
   
+  h2, 
+  .header-sub {
+    font-size: 1.75rem;
+  }
+  
+  header,
   main {
-    width: 40%;
+    width: 50%;
+
+    min-height: 100vh;
   }
 }
