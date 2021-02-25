@@ -1,0 +1,77 @@
+/*  font-family: 'Source Sans Pro', sans-serif;  */
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: white;
+  max-width: 300px;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.header-sub, .main-title {
+  font-size: 1.3125rem;
+}
+
+strong { font-weight: 900; }
+
+/* used specific class name to select element but could use:
+ h1 + p for adjacent sibling 'p's or h1 ~ p for all sibling 'p's (v useful for React) */
+.header-sub, .main-sub {
+  color: #F18119;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.main-sub {
+  font-size: 1rem;
+}
+
+.top-text, .fine-print {
+  font-size: 0.625rem;
+}
+
+.top-text {
+  order: -1;
+  margin: 0;
+  color: #F18119;
+  border-top: #F18119 5px solid;
+  padding-top: 0.3em;
+  text-transform: uppercase;
+}
+
+.main-sub {
+  margin-top: 0;
+}
+
+/* Layout */
+
+header, main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 100%;
+  background: url(images/dark-ribs.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+main {
+  padding: 1em;
+}
