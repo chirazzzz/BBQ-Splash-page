@@ -47,7 +47,9 @@ h2, strong { font-weight: 900; }
   color: #F18119;
   font-weight: 900;
   border-top: #F18119 5px solid;
-  padding-top: 0.3em;
+  /* border-image allows gradients in borders. Need to add 1 after linear-gradient */
+  border-image: linear-gradient(to left, #f7b733, #fc4a1a) 1;
+  padding-top: 3px;
   text-transform: uppercase;
 }
 
@@ -78,8 +80,9 @@ main {
 
 header {
   height: 100%;
+  background-image: url(images/ribs.jpg);
   background-color: #404040; /* In case background-image doesn't load */
-  background-image: url(images/dark-ribs.jpg);
+  background-blend-mode: multiply;
   background-position: center;
   background-size: cover;
   padding: 0 .5em 2em;
@@ -112,6 +115,15 @@ input[type="email"] {
   /* Forms don't inherit font props so adding this makes it happen */
   text-align: inherit;
   font-size: inherit;
+  transform: scale(1);
+  transition: transform 400ms;
+}
+
+/* Only want change when input is clicked into for typing so :hover not included */
+input:focus {
+  border: 1px solid #404040;
+  transform: scale(1.03);
+  outline: 0;
 }
 
 input, 
@@ -136,6 +148,15 @@ input,
   background: #fc4a1a;  /* fallback for old browsers */
   background: linear-gradient(to left, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #fff;
+  transform: scale(1);
+  transition: color 250ms, transform 400ms;
+}
+
+.btn-primary:hover, 
+.btn-primary:focus {
+  color: #404040;
+  transform: scale(1.03);
+  outline: 0;
 }
 
 /* =================
