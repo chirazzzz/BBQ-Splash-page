@@ -15,17 +15,18 @@
     <p class="top-text">Mouthwateringly delicious</p>
   </header>
 
-  <main>
+  <main id="Main-Content">
     <h2 class="main-title">Become a BBQ master!</h2>
     <p class="main-sub">Register Today</p>
     <p>BBQ isn't just standing in front of your grill with it on full blast and hoping for the best. It's an art! One way to speed up the process is to learn from the best. You can do just that by signing up for this free webinar!</p>
-    <form class="email-collector" action="#" method="POST">
-      <input type="text" id="fname" placeholder="first name" aria-label="first name" required>
-      <input type="email" id="email" placeholder="email" aria-label="email address" required>
-      <br>
+    <form id="Email-Collector" class="email-collector" action="#" method="POST">
+      <input name="firstName" type="text" id="fname" placeholder="first name" aria-label="first name" required>
+      <input name="emailAddress" type="email" id="email" placeholder="email" aria-label="email address" required>
       <button class="btn btn-primary" type="submit">register</button>
     </form>
     <p class="fine-print">We'll never share your information without your permission</p>
   </main>
+
+  <script src="index.js"></script>
 </body>
 </html>
